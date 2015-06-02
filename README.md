@@ -1,4 +1,12 @@
-# Fizz Buzz Kata
+# Scala Katas
+
+A repo for practicing Scala implementation using code katas
+
+## Fizz Buzz
+
+[./src/main/scala/workshop/codekata/FizzBuzz.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/FizzBuzz.scala)
+
+[./src/test/scala/FizzBuzzSpec.scala](https://github.com/Teqqles/scala-katas/blob/master/src/test/scala/FizzBuzzSpec.scala)
 
 Return “fizz”, “buzz” or “fizzbuzz”.
 
