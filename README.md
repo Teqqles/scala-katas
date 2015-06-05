@@ -17,6 +17,13 @@ For a given natural number greater than zero return:
 “fizzbuzz” if the number is dividable by 15
 the same number if no other requirement is fulfilled
 
+## Roman Numerals Calculator
+### from: http://securesoftwaredev.com/2011/12/05/practicing-tdd-using-the-roman-numerals-kata/
+
+1. Given a single Roman numeral I can convert this to integers
+2. Given multiple Roman numerals I can add these together (when supplied in order)
+3. Given multiple Roman numerals that are not in order I can add and subtract the values to calculate the integer equivalent
+
 ## String Calculator
 ### from: http://osherove.com/tdd-kata-1/
 

@@ -10,7 +10,6 @@ object StringCalculator {
                     .split( """\]""" )
                     .mkString( "|" )
         }
-
     }
 
     val singleCharacterDelimiter           = """^//(.)\n(.+)""".r
