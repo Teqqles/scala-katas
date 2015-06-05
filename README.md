@@ -1,6 +1,6 @@
 # Scala Katas
 
-A repo for practicing Scala implementation using code katas
+A repo for practicing Scala implementation using code katas.  Feel free to download, browse through the tests and have a go with your own implementation.
 
 ## Fizz Buzz
 
