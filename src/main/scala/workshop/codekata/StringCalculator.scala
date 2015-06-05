@@ -3,9 +3,14 @@ package workshop.codekata
 object StringCalculator {
 
     implicit class StringCalculatorFeatures( str: String ) {
-        def escapeDanglingMeta: String = {
-            str.replaceAll( "\\*", """\\*""" )
+        def escapeDanglingMeta: String = str.replaceAll( "\\*", """\\*""" )
+
+        def reorganizeMultipleDelimiters: String = {
+            str.replaceAll( """\[""", "" )
+                    .split( """\]""" )
+                    .mkString( "|" )
         }
+
     }
 
     val singleCharacterDelimiter           = """^//(.)\n(.+)""".r
@@ -26,10 +31,7 @@ object StringCalculator {
             case singleCharacterDelimiter( delimiter, separatedValues ) => delimiter -> separatedValues
             case multipleCharacterDelimiter( delimiter, separatedValues ) => delimiter -> separatedValues
             case multipleCharacterMultipleDelimiter( _, delimiters, separatedValues ) =>
-                delimiters
-                        .replaceAll( """\[""", "" )
-                        .split( """\]""" )
-                        .mkString( "|" ) -> separatedValues
+                delimiters.reorganizeMultipleDelimiters -> separatedValues
             case _ => "," -> stringContainingDelimiter
         }
     }
@@ -40,7 +42,7 @@ object StringCalculator {
                     .filter( _.toInt <= 0 )
                     .mkString( "," ) + ")" )
         } else {
-            stringContainingNumbers.filter( _.toInt < 1000 ).foldLeft( 0 )( ( b, a: String ) => b + a.toInt )
+            stringContainingNumbers.filter( _.toInt < 1000 ).foldLeft( 0 )( ( b, a ) => b + a.toInt )
         }
     }
 }
