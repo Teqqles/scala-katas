@@ -1,30 +1,35 @@
 package workshop.codekata
 
 object StringCalculator {
+
+    implicit class StringCalculatorFeatures( delimiters: String ) {
+        def escapeDanglingMeta: String = {
+            delimiters.replaceAll( "\\*", """\\*""" )
+        }
+    }
+
+    val singleCharacterDelimiter           = """^//(.)\n(.+)""".r
+    val multipleCharacterDelimiter         = """^//\[([^\]]+)\]\n(.+)""".r
+    val multipleCharacterMultipleDelimiter = """^(//)(\[.+?\])\n(.+)""".r
+
     def add( numbers: String ): Int = {
         extractDelimiterFromString( numbers ) match {
             case (_, "") => 0
             case (delimiter, separatedValues) =>
                 addNumbers( separatedValues
-                        .split( delimiter + "|\\n" ) )
+                        .split( delimiter.escapeDanglingMeta + "|\\n" ) )
         }
     }
 
     private def extractDelimiterFromString( stringContainingDelimiter: String ): (String, String) = {
-        val singleCharacterDelimiter = """^//(.)\n(.+)""".r
-        val multipleCharacterDelimiter = """^//\[([^\]]+)\]\n(.+)""".r
-        val multipleCharacterMultipleDelimiter = """^(//)(\[.+?\])\n(.+)""".r
         stringContainingDelimiter match {
-            case singleCharacterDelimiter( delimiter, separatedValues ) => delimiter
-                    .replaceAll( "\\*", """\\*""" ) -> separatedValues
-            case multipleCharacterDelimiter( delimiter, separatedValues ) => delimiter
-                    .replaceAll( "\\*", """\\*""" ) -> separatedValues
+            case singleCharacterDelimiter( delimiter, separatedValues ) => delimiter -> separatedValues
+            case multipleCharacterDelimiter( delimiter, separatedValues ) => delimiter -> separatedValues
             case multipleCharacterMultipleDelimiter( _, delimiters, separatedValues ) =>
                 delimiters
                         .replaceAll( """\[""", "" )
                         .split( """\]""" )
-                        .mkString( "|" )
-                        .replaceAll( "\\*", """\\*""" ) -> separatedValues
+                        .mkString( "|" ) -> separatedValues
             case _ => "," -> stringContainingDelimiter
         }
     }
