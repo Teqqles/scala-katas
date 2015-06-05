@@ -2,9 +2,9 @@ package workshop.codekata
 
 object StringCalculator {
 
-    implicit class StringCalculatorFeatures( delimiters: String ) {
+    implicit class StringCalculatorFeatures( str: String ) {
         def escapeDanglingMeta: String = {
-            delimiters.replaceAll( "\\*", """\\*""" )
+            str.replaceAll( "\\*", """\\*""" )
         }
     }
 
