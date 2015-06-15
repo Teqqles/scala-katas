@@ -17,6 +17,15 @@ For a given natural number greater than zero return:
 “fizzbuzz” if the number is dividable by 15
 the same number if no other requirement is fulfilled
 
+## Prime Factors
+### from: http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata
+
+[./src/main/scala/workshop/codekata/PrimeFactors.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/PrimeFactors.scala)
+
+[./src/test/scala/PrimeFactorsSpec.scala](https://github.com/Teqqles/scala-katas/blob/master/src/test/scala/PrimeFactorsSpec.scala)
+
+Write a program to generate the prime factors for any supplied number.
+
 ## Roman Numerals Calculator
 ### from: http://securesoftwaredev.com/2011/12/05/practicing-tdd-using-the-roman-numerals-kata/
 
