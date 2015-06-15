@@ -20,6 +20,10 @@ the same number if no other requirement is fulfilled
 ## Roman Numerals Calculator
 ### from: http://securesoftwaredev.com/2011/12/05/practicing-tdd-using-the-roman-numerals-kata/
 
+[./src/main/scala/workshop/codekata/RomanNumeralsCalculator.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/RomanNumeralsCalculator.scala)
+
+[./src/test/scala/RomanNumeralsCalculatorSpec.scala](https://github.com/Teqqles/scala-katas/blob/master/src/test/scala/RomanNumeralsCalculatorSpec.scala)
+
 1. Given a single Roman numeral I can convert this to integers
 2. Given multiple Roman numerals I can add these together (when supplied in order)
 3. The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values ('IV' and 'IX', 'XL' and 'XC', 'CD' and 'CM')
