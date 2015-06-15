@@ -22,7 +22,12 @@ the same number if no other requirement is fulfilled
 
 1. Given a single Roman numeral I can convert this to integers
 2. Given multiple Roman numerals I can add these together (when supplied in order)
-3. Given multiple Roman numerals that are not in order I can add and subtract the values to calculate the integer equivalent
+3. The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values ('IV' and 'IX', 'XL' and 'XC', 'CD' and 'CM')
+4. The symbols 'I', 'X', 'C', and 'M' can be repeated at most 3 times in a row.
+5. The symbols 'V', 'L', and 'D' can never be repeated.
+6. The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values ('IV' and 'IX', 'XL' and 'XC', 'CD' and 'CM').
+7. Only one subtraction can be made per numeral ('XC' is allowed, 'XXC' is not).
+8. The '5' symbols ('V', 'L', and 'D') can never be subtracted.
 
 ## String Calculator
 ### from: http://osherove.com/tdd-kata-1/
