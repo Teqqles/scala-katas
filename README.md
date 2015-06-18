@@ -3,7 +3,7 @@
 A repo for practicing Scala implementation using code katas.  Feel free to download, browse through the tests and have a go with your own implementation.
 
 ## Bowling Game
-## from: http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata
+## Source: http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata
 
 The game consists of 10 frames.  In each frame the player has
 two opportunities to knock down 10 pins.  The score for the frame is the total
@@ -34,8 +34,22 @@ For a given natural number greater than zero return:
 “fizzbuzz” if the number is dividable by 15
 the same number if no other requirement is fulfilled
 
+## NASA Countdown
+### Source: http://codingkata.net/Katas/Beginner/NasaCountdown
+
+[./src/main/scala/workshop/codekata/NasaCountdown.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/NasaCountdown.scala)
+
+[./src/test/scala/NasaCountdownSpec.scala](https://github.com/Teqqles/scala-katas/blob/master/src/test/scala/NasaCountdownSpec.scala)
+
+The NASA wants to shoot yet another rocket into orbit. As this is your first day as a wannabe scientist at the ground control, you are very excited. So excited that when the guy responsible for the countdown asks you to bring him some coffee, you accidentally spill it all over his lap and the computer – both are not capable of doing their job now.
+
+But the liftoff is only seconds away. Somebody has to do the countdown – or the rocket can’t start and millions of dollars are lost! In a moment of great bravery you remember you learnt how to count (a long time ago in High School). So you take the chance!
+
+The ground control chief will tell you where to start – then count to 0.
+(example for ’11’: 11 10 9 8 7 6 5 4 3 2 1 0)
+
 ## Prime Factors
-### from: http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata
+### Source: http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata
 
 [./src/main/scala/workshop/codekata/PrimeFactors.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/PrimeFactors.scala)
 
@@ -44,7 +58,7 @@ the same number if no other requirement is fulfilled
 Write a program to generate the prime factors for any supplied number.
 
 ## Roman Numerals Calculator
-### from: http://securesoftwaredev.com/2011/12/05/practicing-tdd-using-the-roman-numerals-kata/
+### Source: http://securesoftwaredev.com/2011/12/05/practicing-tdd-using-the-roman-numerals-kata/
 
 [./src/main/scala/workshop/codekata/RomanNumeralsCalculator.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/RomanNumeralsCalculator.scala)
 
@@ -60,7 +74,7 @@ Write a program to generate the prime factors for any supplied number.
 8. The '5' symbols ('V', 'L', and 'D') can never be subtracted.
 
 ## String Calculator
-### from: http://osherove.com/tdd-kata-1/
+### Source: http://osherove.com/tdd-kata-1/
 
 [./src/main/scala/workshop/codekata/StringCalculator.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/StringCalculator.scala)
 
