@@ -34,6 +34,21 @@ For a given natural number greater than zero return:
 “fizzbuzz” if the number is dividable by 15
 the same number if no other requirement is fulfilled
 
+## Hangman
+### Source: https://en.wikipedia.org/wiki/Hangman_(game)
+
+I know a word and I want you to guess it.  You have 9 guesses to discover the secret word or your man will be hung.
+
+Note: This version will not draw the gallows.
+```
+_________
+|/      |
+|       0
+|      \|/
+|       |
+|      / \
+```
+
 ## NASA Countdown
 ### Source: http://codingkata.net/Katas/Beginner/NasaCountdown
 
