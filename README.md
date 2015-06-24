@@ -2,6 +2,8 @@
 
 A repo for practicing Scala implementation using code katas.  Feel free to download, browse through the tests and have a go with your own implementation.
 
+If you only want to download the Kata tests these are available via the  [tests-only](https://github.com/Teqqles/scala-katas/tree/tests-only) branch
+
 ## Bowling Game
 ## Source: http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata
 
