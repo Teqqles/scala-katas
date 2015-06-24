@@ -65,6 +65,17 @@ But the liftoff is only seconds away. Somebody has to do the countdown – or th
 The ground control chief will tell you where to start – then count to 0.
 (example for ’11’: 11 10 9 8 7 6 5 4 3 2 1 0)
 
+## Ordered Jobs
+### Source: http://invalidcast.tumblr.com/post/52980617776/the-ordered-jobs-kata
+
+[./src/main/scala/workshop/codekata/OrderedJobs.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/OrderedJobs.scala)
+
+[./src/test/scala/OrderedJobsSpec.scala](https://github.com/Teqqles/scala-katas/blob/master/src/test/scala/OrderedJobs.scala)
+
+Imagine we have a list of jobs, each represented by a character. Because certain jobs must be done before others, a job may have a dependency on another job. For example, a may depend on b, meaning the final sequence of jobs should place b before a. If a has no dependency, the position of a in the final sequence does not matter.
+
+The goal of the kata is to parse the job dependency structure and produce a sequence of jobs in the order that observes their dependency chain.
+
 ## Prime Factors
 ### Source: http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata
 
