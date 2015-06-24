@@ -1,10 +1,8 @@
 package workshop.codekata
 
-case class BowlingGame( word: String ) {
-    def guesses = List( )
+class BowlingGame {
+    def roll( i: Int ) = ???
 
-    def guessesRemaining = -1
-
-    def guess( guess: Char ) = List( )
+    def score = -1
 
 }

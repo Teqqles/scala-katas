@@ -1,8 +1,5 @@
 package workshop.codekata
 
-class FizzBuzz {
-    def roll( i: Int ) = ???
-
-    def score = -1
-
+object FizzBuzz {
+    def getResult( i: Int ) = ""
 }

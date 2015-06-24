@@ -1,6 +1,5 @@
 package workshop.codekata
 
-object RomanNumeralsCalculator {
-    def Countdown( i:Int ) = List()
-
-}
+case class RomanNumeralsCalculator( numerals: String ) {
+    def getInt = -1
+};

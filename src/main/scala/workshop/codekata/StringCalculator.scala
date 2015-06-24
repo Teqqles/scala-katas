@@ -1,5 +1,5 @@
 package workshop.codekata
 
-case class StringCalculator( numerals: String ) {
-    def getInt = -1
+object StringCalculator {
+    def add( str: String ) = -1
 };
