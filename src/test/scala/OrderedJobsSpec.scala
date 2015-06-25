@@ -15,10 +15,6 @@ class OrderedJobsSpec extends FlatSpec with Matchers {
         OrderedJobs.parse( "a =>\nb =>\nc =>" ) should be( List( "a", "b", "c" ) )
     }
 
-    it should "string 'a =>\nb => c\n c=>' should contain the jobs 'a', 'b' and 'c'" in {
-        OrderedJobs.parse( "a =>\nb => c\nc =>" ) should be( List( "a", "b", "c" ) )
-    }
-
     it should "string 'a =>\nb => c\n c=>' should contain the job 'c' before the job 'b'" in {
         OrderedJobs.parse( "a =>\nb => c\nc =>" ) should be( List( "a", "c", "b" ) )
     }
