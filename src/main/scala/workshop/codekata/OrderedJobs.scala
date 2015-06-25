@@ -14,6 +14,8 @@ object OrderedJobs {
         }
 
         job match {
+            case Job( x, y: Any ) if list.contains( x ) && list.contains( y ) =>
+                throw new JobCircularDependencyException
             case Job( x, null ) if !list.contains( x ) => list :+ x
             case Job( x, y: Any ) if !list.contains( x ) && !list.contains( y ) => list :+ y :+ x
             case Job( x, y: Any ) if !list.contains( y ) => insertBefore( x, y )
@@ -23,15 +25,10 @@ object OrderedJobs {
     }
 
     def parse( str: String ): List[ String ] = {
-        val list: List[ Job ] = str match {
-            case "" => List( )
-            case _ => str.split( "\n" ).toList.map( x => JobExtractor( x ) )
-        }
+        val list: List[ Job ] = str.split( "\n" ).toList.map( x => JobExtractor( x ) )
 
         def extractJobs( jobsRemaining: List[ Job ], jobsList: List[ String ] ): List[ String ] = {
             jobsRemaining match {
-                case x :: _ if jobsList.contains( x.id ) && jobsList.contains( x.dependency ) =>
-                    throw new JobCircularDependencyException
                 case x :: _ => extractJobs( jobsRemaining.tail,
                     addJob( jobsList, x ) )
                 case Nil => jobsList
@@ -44,7 +41,8 @@ object OrderedJobs {
         job.split( " =>.?" ) match {
             case Array( x, y ) if x == y => throw new JobSelfReferenceException
             case Array( x, y ) => Job( x, y )
-            case Array( x ) => Job( x, null )
+            case Array( x ) if x.length > 0 => Job( x, null )
+            case _ => null
         }
     }
 }
