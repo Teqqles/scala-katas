@@ -65,6 +65,21 @@ But the liftoff is only seconds away. Somebody has to do the countdown – or th
 The ground control chief will tell you where to start – then count to 0.
 (example for ’11’: 11 10 9 8 7 6 5 4 3 2 1 0)
 
+## Numbers In Words
+### Source: http://codingdojo.org/cgi-bin/index.pl?KataNumbersInWords
+
+[./src/main/scala/workshop/codekata/NumbersInWords.scala](https://github.com/Teqqles/scala-katas/blob/master/src/main/scala/workshop/codekata/NumbersInWords.scala)
+
+[./src/test/scala/NumbersInWordsSpec.scala](https://github.com/Teqqles/scala-katas/blob/master/src/test/scala/NumbersInWordsSpec.scala)
+
+It occurs now and then in real life that people want to write about money, especially about a certain amount of money. If it comes to cheques or contracts for example some nations have laws that state that you should write out the amount in words additionally to the amount in numbers to avoid fraud and mistakes. So if you want to transfer 745 $ to someone via cheque you have to fill out to fields:
+
+745.00 $ (amount in numbers)
+
+seven hundred and forty five dollars (amount in words)
+
+this variation does not include currency.
+
 ## Ordered Jobs
 ### Source: http://invalidcast.tumblr.com/post/52980617776/the-ordered-jobs-kata
 
